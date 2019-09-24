@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Detail = (props) => {
-  return (<p>detail</p>);
+const Detail = ({pokemon}) => {
+  return pokemon ? <h2>{pokemon.name}</h2> : null;
 }
 
 export default Detail;

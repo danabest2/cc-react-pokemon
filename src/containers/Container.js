@@ -29,8 +29,8 @@ class Container extends Component {
     return(
     <div>
       <h1>Pokemon</h1>
-      <Selector pokemon={this.state.pokemon} select={this.select}/>
-      <Detail />
+      <Selector pokemon={this.state.pokemon} select={this.select} />
+      <Detail pokemon={this.state.selectedPokemon} />
     </div>
     );
   }
