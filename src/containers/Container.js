@@ -20,9 +20,18 @@ class Container extends Component {
       .catch(err => console.error(err));
   }
 
+  getPokemonDetails(pokemon) {
+    const url = pokemon.url;
+    fetch(url)
+      .then(r => r.json())
+      .then(data => this.setState({selectedPokemon: data}))
+      .catch(err => console.error(err));
+  }
+
   select(i) {
     const selectedPokemon = this.state.pokemon[i];
     this.setState({selectedPokemon});
+    this.getPokemonDetails(selectedPokemon);
   }
 
   render() {
